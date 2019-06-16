@@ -1,0 +1,19 @@
+#when we don't want to repeat code.
+
+{
+  apple: company(id: "2") {
+      ...company_details
+    	
+  },
+  google: company(id: "1") {
+      ...company_details
+    	
+  }
+}
+
+fragment company_details on Company {
+  id,
+  name,
+  description
+  
+}
